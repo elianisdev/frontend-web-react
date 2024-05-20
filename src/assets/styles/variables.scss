@@ -1,0 +1,228 @@
+// Colors variables
+$primary-color: #b1cace;
+$secondary-color: #9896f1;
+$tertiary-color: #d59bf6;
+$quaternary-color: #edb1f1;
+
+$gray-1: #f8f9fa;
+$gray-2: #e9ecef;
+$gray-3: #dee2e6;
+$gray-4: #ced4da;
+$gray-5: #adb5bd;
+$gray-6: #868e96;
+$gray-7: #495057;
+$gray-8: #343a40;
+$gray-9: #212529;
+
+$primary-gradiant-color: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);;
+$secondary-gradiant-color: linear-gradient(68.6deg, rgb(252, 165, 241) 1.8%, rgb(181, 255, 255) 100.5%);
+$tertiary-gradiant-color: radial-gradient(780px at 37.8% 100.3%, rgb(19, 55, 115) 2.2%, rgb(32, 7, 80) 20.2%, rgb(27, 88, 111) 58.6%, rgb(115, 88, 44) 75%, rgb(99, 19, 90) 89.6%, rgb(12, 51, 76) 96.1%);
+$quaternary-gradiant-color: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+
+// Font variables
+$font-family: 'Roboto', sans-serif;
+$font-size-1: 12px;
+$font-size-2: 14px;
+$font-size-3: 16px;
+$font-size-4: 18px;
+$font-size-5: 20px;
+$font-size-6: 24px;
+$font-size-7: 28px;
+$font-size-8: 32px;
+$font-size-9: 36px;
+
+// Spacing variables
+$spacing-1: 5px;
+$spacing-2: 10px;
+$spacing-3: 15px;
+$spacing-4: 20px;
+$spacing-5: 25px;
+$spacing-6: 30px;
+$spacing-7: 35px;
+$spacing-8: 40px;
+$spacing-9: 130px;
+
+
+//height variables
+$height-1: 15px;
+$height-2: 80px;
+$height-3: 300px;
+$height-4: 60vh;
+$height-5: 500px;
+$height-6: 600px;
+
+// width variables
+
+$width-1: 80px;
+$width-2: 90px;
+$width-3: 300px;
+$width-4: 400px;
+$width-5: 500px;
+$width-6: 600px;
+$width-7: 700px;
+$width-8: 800px;
+$width-9: 900px;
+$width-10: 1000px;
+$width-11: 1100px;
+
+//border-radius variables
+$border-radius-1: 0.5px;
+$border-radius-2: 10px;
+$border-radius-3: 15px;
+$border-radius-4: 20px;
+$border-radius-5: 25px;
+$border-radius-6: 30px;
+$border-radius-7: 35px;
+$border-radius-8: 40px;
+$border-radius-9: 45px;
+
+//border variables
+$border-1: 1px;
+$border-2: 2px;
+$border-3: 3px;
+$border-4: 4px;
+$border-5: 5px;
+$border-6: 6px;
+$border-7: 7px;
+$border-8: 8px;
+$border-9: 9px;
+
+//box-shadow variables
+$box-shadow-1: 0 0 5px rgba(0, 0, 0, 0.1);
+$box-shadow-2: 0 0 10px rgba(0, 0, 0, 0.2);
+$box-shadow-3: 0 0 15px rgba(0, 0, 0, 0.3);
+$box-shadow-4: 0 0 20px rgba(0, 0, 0, 0.4);
+$box-shadow-5: 0 0 25px rgb(218, 32, 218);
+$box-shadow-6: 0 0 30px rgba(0, 0, 0, 0.6);
+$box-shadow-7: 0 0 35px rgba(0, 0, 0, 0.7);
+$box-shadow-8: 0 0 40px rgba(0, 0, 0, 0.8);
+
+//padding variables
+$padding-1: 5px;
+$padding-2: 10px;
+$padding-3: 15px;
+$padding-4: 20px;
+$padding-5: 25px;
+$padding-6: 30px;
+$padding-7: 35px;
+$padding-8: 40px;
+$padding-9: 45px;
+
+// margin to cente
+$margin-center: 0 auto;
+
+//margin-left variables
+$margin-left-1: 14px;
+$margin-left-2: 10px;
+$margin-left-3: 15px;
+$margin-left-4: 20px;
+$margin-left-5: -20px;
+$margin-left-6: 600px;
+$margin-left-7: 35px;
+$margin-left-8: 40px;
+$margin-left-9: 35px;
+$margin: 0 center;
+$margin-center: 0 auto;
+
+//margin-top variables
+$margin-top-1: -55px;
+$margin-top-2: -20px;
+$margin-top-3: 15px;
+$margin-top-4: 50px;
+$margin-top-5: 200px;
+$margin-top-6: 600px;
+
+//margin-bottom variables
+$margin-bottom-1: 1px;
+$margin-bottom-2: 10px;
+$margin-bottom-3: 50px;
+$margin-bottom-4: 20px;
+$margin-bottom-5: 25px;
+$margin-bottom-6: 20px;
+$margin-bottom-7: 35px;
+$margin-bottom-8: 40px;
+$margin-bottom-9: 20px;
+
+
+//border spacing variables
+$border-spacing-1: 5px;
+$border-spacing-2: 10px;
+$border-spacing-3: 15px;
+$border-spacing-4: 20px;
+$border-spacing-5: 25px;
+$border-spacing-6: 30px;
+$border-spacing-7: 35px;
+$border-spacing-8: 40px;
+$border-spacing-9: 15px;
+
+//flex variables
+$flex-direction: row;
+$flex-wrap: wrap;
+$flex-row: row;
+$flex-column: column;
+$flex-row-reverse: row-reverse;
+$flex-column-reverse: column-reverse;
+$flex-wrap-reverse: wrap-reverse;
+$flex-nowrap: nowrap;
+$flex-wrap-reverse: wrap-reverse;
+$flex-1: 1;
+$flex-2: 2;
+$flex-3: 3;
+$flex-4: 4;
+$flex-5: 5;
+$flex-6: 6;
+$flex-7: 7;
+$flex-8: 8;
+$flex-9: 9;
+$flex-10: 10;
+$flex-direction: row;
+
+//justify-content variables
+$justify-content: center;
+$justify-content-start: start;
+$justify-content-end: end;
+$justify-content-space-between: space-between;
+$justify-content-space-around: space-around;
+$justify-content-space-evenly: space-evenly;
+
+//display variables
+
+$display-inline: inline-block;
+$display: grid;
+$display-inline: inline-grid;
+$display: flex;
+$display-inline: inline-flex;
+
+//position variables
+$position-absolute: absolute;
+$position-relative: relative;
+$position-fixed: fixed;
+$position-sticky: sticky;
+
+
+//align-items variables
+$align-items: center;
+$align-items-start: start;
+$align-items-end: end;
+$align-items-baseline: baseline;
+$align-items-stretch: stretch;
+
+//Margin right variables
+$margin-right-1: 0px;
+$margin-right-2: 10px;
+$margin-right-3: 50px;
+$margin-right-4: 20px;
+$margin-right-5: center;
+$margin-right-6: 20px;
+$margin-right-7: auto;
+
+//margin
+$margin-1: 0px;
+$margin-2: 10px;
+$margin-3: 50px;
+$margin-4: 20px;
+$margin-5: center;
+
+
+
+
