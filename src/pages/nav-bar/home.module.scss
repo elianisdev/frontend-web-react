@@ -1,25 +1,64 @@
+@import '../../assets/styles/variables.scss';
 
-ul {
-  border: 1px solid #e7e7e7;
-  background-color: #f3f3f3;
+nav {
+  display: $display;
+  justify-content: $justify-content-space-between;
+  padding: $margin-2;
+  background-color: #5696a3;
 }
 
-li a {
-  color: #666;
+nav div {
+  display: $display;
+  align-items: $align-items;
 }
 
-li a.active {
-  color: #fff;
-  background-color: #007bff;
+nav ul {
+  display: $display;
+  justify-content: $justify-content-space-between;
+  list-style-type: none;
+  padding: $margin-2;
 }
 
-li a:hover:not(.active) {
-  background-color: #ddd;
+nav ul li {
+  display: $display-inline;
+  margin-right: $margin-right-2;
 }
 
-li {
-  display: inline;
-  padding: 10px;
+nav ul li a {
+  color: #cacedf;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #e9e2e2;
+}
+
+nav div button {
+  background-color: #3672b8;
+  color: white;
+  padding: $margin-5;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: $align-items;
+  }
+
+  nav ul li {
+    margin-bottom: $margin-2;
+  }
+}
+.navbar-logo {
+  width: 15px; // Ajusta el ancho de la imagen
+  height: 15px; // Ajusta la altura de la imagen
+  margin-right: $margin-right-2; // Añade margen a la derecha
 }
 
 

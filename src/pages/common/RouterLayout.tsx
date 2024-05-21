@@ -5,9 +5,8 @@ export const RouterLayout: FC = () => {
     return(
         //Outlet nos permite establecer un slot o espacio vacío dentro de un componente, donde podemos renderizar el resultado de una ruta
         <>
-          <Outlet/>
+            <Outlet/>
         </>
     )
-    }
-;
+    };
 //Ruta layout para utilizar
