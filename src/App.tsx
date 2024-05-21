@@ -1,9 +1,12 @@
 import React, {FC} from 'react';
-import {Login} from "./pages/login/login";
+import {BrowserRouter} from "react-router-dom";
+import {AppRouter} from "./router";
 
 const App: FC = () => {
   return (
-        <Login/>
+        <BrowserRouter>
+          <AppRouter/>
+        </BrowserRouter>
   );
 }
 
