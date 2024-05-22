@@ -4,7 +4,7 @@ nav {
   display: $display;
   justify-content: $justify-content-space-between;
   padding: $margin-2;
-  background-color: #5696a3;
+  background:$tertiary-gradiant-color;
 }
 
 nav div {
@@ -16,16 +16,16 @@ nav ul {
   display: $display;
   justify-content: $justify-content-space-between;
   list-style-type: none;
-  padding: $margin-2;
+  padding: $padding-6;
 }
 
 nav ul li {
   display: $display-inline;
-  margin-right: $margin-right-2;
+  margin-right: $margin-left-7;
 }
 
 nav ul li a {
-  color: #cacedf;
+  color: #f8f9fc;
   text-decoration: none;
 }
 
@@ -55,9 +55,9 @@ nav div button {
     margin-bottom: $margin-2;
   }
 }
-.navbar-logo {
-  width: 15px; // Ajusta el ancho de la imagen
-  height: 15px; // Ajusta la altura de la imagen
+.logo {
+  width: 100px; // Ajusta el ancho de la imagen
+  height: 100px; // Ajusta la altura de la imagen
   margin-right: $margin-right-2; // Añade margen a la derecha
 }
 
