@@ -1,7 +1,33 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import styles from './login.module.scss';
 
+
+type LoginType = {
+    email: string,
+    password: string
+}
 export const Login: FC = () => {
+
+    //para validar el formulario llamo a las caracteristicas de react
+
+    const [loginData, setLoginData] = useState<LoginType>({
+        email: '',
+        password: ''
+    });
+
+    //funcion para manejar los cambios en el formulario
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setLoginData({
+            ...loginData,
+            [event.target.name]: event.target.value
+        });
+    }
+    //funcion para enviar los datos del formulario
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        console.log(loginData);
+    }
+
     return (
         <div className={`${styles['container-login']} margin-center`}>
 
@@ -12,16 +38,29 @@ export const Login: FC = () => {
             </div>
 
             <div className={'full-width padding-4'}>
-                <form>
-
+                <form onSubmit={handleSubmit}>
                     <div className={'margin-center'}>
                         <div className={'text-center'}>
                             {/*<label className={styles.text}> <br/><b>Username: </b></label>*/}
-                            <input className={'input'} placeholder="email" required/>
+                            <input
+                                name="email"
+                                className={'input'}
+                                placeholder="email"
+                                type= 'email'
+                                required
+                                onChange={handleChange}
+                            />
                         </div>
                         <div className={'text-center'}>
                             {/*<label className={styles.text}><br/><b>Password: </b></label>*/}
-                            <input className={'input'} placeholder="password"/>
+                            <input
+                                name="password"
+                                className={'input'}
+                                placeholder="password"
+                                type='password'
+                                required
+                                onChange={handleChange}
+                            />
                         </div>
                     </div>
 
