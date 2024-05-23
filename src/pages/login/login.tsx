@@ -1,14 +1,13 @@
 import React, {FC, useState} from 'react';
 import styles from './login.module.scss';
 
-
 type LoginType = {
     email: string,
     password: string
 }
 export const Login: FC = () => {
 
-    //para validar el formulario llamo a las caracteristicas de react
+    //para validar el formulario llamo a useState de react
 
     const [loginData, setLoginData] = useState<LoginType>({
         email: '',
