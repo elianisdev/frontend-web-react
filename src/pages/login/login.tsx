@@ -1,11 +1,13 @@
 import React, {FC, useState} from 'react';
 import styles from './login.module.scss';
+import {useNavigate} from "react-router-dom";
 
 type LoginType = {
     email: string,
     password: string
 }
 export const Login: FC = () => {
+    const navigate = useNavigate();
 
     //para validar el formulario llamo a useState de react
 
@@ -64,7 +66,7 @@ export const Login: FC = () => {
                     </div>
 
                     <div className={'text-center padding-4'}>
-                        <button className={'button button-primary'}>
+                        <button className={'button button-primary'} onClick={()=> navigate('/home')}>
                             Login
                         </button>
                     </div>
