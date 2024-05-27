@@ -1,10 +1,18 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import styles from './home.module.scss';
 import {HeaderComponent} from "../header/header";
+import {getUsers} from "../../api/users";
 
 
 export const Home: FC = () => {
+
+    useEffect(() => {
+        getUsers.getAll({name: 'juan'})
+            .then((r) => console.log(r.data))
+            .catch((e) => console.error(e))
+    }, []);
+
     const navigate = useNavigate();
     return (
         <>
@@ -30,7 +38,7 @@ export const Home: FC = () => {
                     </Link>
                 </div>
             </nav>
-            <HeaderComponent  description={'Bienvenido a mi pagina'}/>
+            <HeaderComponent  description={'Bienvenido a mi pagina'} element={'Bienvenido a mi pagina'}/>
         </>
 
     );
