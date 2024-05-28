@@ -2,15 +2,20 @@ import React, {FC, useEffect} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import styles from './home.module.scss';
 import {HeaderComponent} from "../header/header";
-import {getUsers} from "../../api/users";
+import {poke} from "../../api/poke";
 
 
 export const Home: FC = () => {
-
+const getPoke = async () => {
+    try {
+        const response = await poke.getAll( {gameIndex: 2});
+        console.log(response.data);
+    } catch (e) {
+        console.error(e);
+    }
+};
     useEffect(() => {
-        getUsers.getAll({name: 'juan'})
-            .then((r) => console.log(r.data))
-            .catch((e) => console.error(e))
+        getPoke();
     }, []);
 
     const navigate = useNavigate();
