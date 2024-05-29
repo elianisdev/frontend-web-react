@@ -3,6 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import styles from './home.module.scss';
 import {HeaderComponent} from "../header/header";
 import {poke} from "../../api/poke";
+import {CardComponent} from "../card/card";
 
 
 export const Home: FC = () => {
@@ -44,6 +45,7 @@ const getPoke = async () => {
                 </div>
             </nav>
             <HeaderComponent  description={'Bienvenido a mi pagina'} element={'Bienvenido a mi pagina'}/>
+            <CardComponent Card={1} />
         </>
 
     );
