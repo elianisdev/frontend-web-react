@@ -1,15 +1,21 @@
 @import '../../assets/styles/variables.scss';
 
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .tarjeta{
   display:flex;
-  flex-direction:column;
+  flex-direction:$flex-row;
   justify-content:space-between;
   width:410px;
   border: $border-1 solid $secondary-color;;
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
   border-radius:15px;
   font-family: sans-serif;
-  margin: $margin-2; // Añade un margen alrededor de la tarjeta
+  margin: 20px; // Añade un margen alrededor de la tarjeta
 }
 
 .titulo{
