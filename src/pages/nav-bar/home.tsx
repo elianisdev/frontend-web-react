@@ -45,7 +45,7 @@ const getPoke = async () => {
                 </div>
             </nav>
             <HeaderComponent  description={'Bienvenido a mi pagina'} element={'Bienvenido a mi pagina'}/>
-            <CardComponent Card={1} />
+            <CardComponent Card={6} />
         </>
 
     );
