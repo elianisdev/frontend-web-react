@@ -1,6 +1,6 @@
 import {instance} from "./base.api";
 
-const endpoint = 'v2/pokemon/ditto';
+const endpoint = 'v2/pokemon/150';
 
 export const poke = {
     getAll: function ({id}: {id: number}){
