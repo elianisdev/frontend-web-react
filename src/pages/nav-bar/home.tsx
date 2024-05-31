@@ -9,7 +9,7 @@ import {CardComponent} from "../card/card";
 export const Home: FC = () => {
 const getPoke = async () => {
     try {
-        const response = await poke.getAll( {gameIndex: 2});
+        const response = await poke.getAll( {id: 25});
         console.log(response.data);
     } catch (e) {
         console.error(e);
