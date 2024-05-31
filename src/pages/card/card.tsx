@@ -12,19 +12,26 @@ type Card = {
         is_hidden: boolean,
         slot: number,
     }[],
+
 }
 export const CardComponent: FC<{ Card: any }> = () => {
     const [cards, setCards] = useState<Card[]>([]);
 
     useEffect(() => {
-        poke.getAll({gameIndex: 1})
+        poke.getAll({id: 1})
             .then((response: { data: any; }) => response.data)
             .then((data: SetStateAction<Card[]>) => {
                 if (Array.isArray(data)) {
                     const newCards = data.map(item => ({
                         name: item.name,
-                        abilities: item.abilities,
-                        // más propiedades...
+                        abilities: item.abilities.map(ability => ({
+                            ability: {
+                                name: ability.ability.name,
+                                url: ability.ability.url,
+                            },
+                            is_hidden: ability.is_hidden,
+                            slot: ability.slot,
+                        })),
                     }));
                     setCards(newCards);
                 } else {
@@ -32,10 +39,11 @@ export const CardComponent: FC<{ Card: any }> = () => {
                 }
             });
     }, []);
+
     return (
         <div className={styles.cardContainer}>
-            {cards.map((card, index) => (
-                <div key={index} className={styles.tarjeta}>
+            {cards.map((card, id) => (
+                <div key={id} className={styles.tarjeta}>
                     <div className={styles.titulo}>{card.name}</div>
                     <div className={styles.cuerpo}>
                         <p>{card.abilities[0].ability.url}</p>
@@ -47,4 +55,4 @@ export const CardComponent: FC<{ Card: any }> = () => {
             ))}
         </div>
     );
-}
+};
