@@ -31,10 +31,13 @@ export const CardComponent: FC<{ Card: any }> = () => {
                     image: response.data.sprites.front_default,
                     name: response.data.name,
                     abilities: response.data.abilities,
+
                 },
             ]);
+            setLoading(false); //finaliza la carga
         } catch (error) {
             console.error('Error:', error);
+            setLoading(false); //finaliza la carga
         }
     }; //función que obtiene los datos de los pokemones
 
@@ -44,18 +47,22 @@ export const CardComponent: FC<{ Card: any }> = () => {
 
     return (
         <div className={styles.cardContainer}>
-            {cards.map((card, id) => (
-                <div key={id} className={styles.tarjeta}>
-                    <img src={card.image} alt={card.name} /> {/* Agrega esta línea */}
-                    <div className={styles.titulo}>{card.name}</div>
-                    <div className={styles.cuerpo}>
-                        <p>{card.abilities[0].ability.url}</p>
+            {loading ? (
+                <p>Cargando...</p> // Muestra esto mientras se está cargando
+            ) : (
+                cards.map((card, id) => (
+                    <div key={id} className={styles.tarjeta}>
+                        <img src={card.image} alt={card.name} />
+                        <div className={styles.titulo}>{card.name}</div>
+                        <div className={styles.cuerpo}>
+                            <p>{card.abilities[0].ability.url}</p>
+                        </div>
+                        <div className={styles.pie}>
+                            <a href="#">Más información</a>
+                        </div>
                     </div>
-                    <div className={styles.pie}>
-                        <a href="#">Más información</a>
-                    </div>
-                </div>
-            ))}
+                ))
+            )}
         </div>
     );
 };
