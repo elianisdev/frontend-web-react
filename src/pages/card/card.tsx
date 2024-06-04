@@ -1,6 +1,7 @@
 import {FC, useState, useEffect} from "react";
 import styles from './card.module.scss';
 import {poke} from '../../api/poke';
+import {useParams} from "react-router-dom";
 
 type Card = {
     image: string | undefined;
@@ -17,34 +18,29 @@ type Card = {
 }
 export const CardComponent: FC<{ Card: any }> = () => {
     const [cards, setCards] = useState<Card[]>([]); //almacena lista de tarjetas
+    const {id} = useParams(); //obtiene el id de la URL
+    const [loading, setLoading] = useState(true); //estado de carga
+
+    const pokemonIds = async () => {
+        try {
+            const response = await poke.getAll({id: 1});
+            console.log(response.data);
+            setLoading(true);
+            setCards([
+                {
+                    image: response.data.sprites.front_default,
+                    name: response.data.name,
+                    abilities: response.data.abilities,
+                },
+            ]);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }; //función que obtiene los datos de los pokemones
 
     useEffect(() => {
-        const pokemonIds = [1, 2, 3, 4, 5]; // Los IDs de los Pokémon que quiero obtener
-
-        Promise.all(pokemonIds.map(id => poke.getAll({id})))
-            .then((responses) => {
-                return responses.map(response => response.data);
-            })
-            .then((data) => {
-                if (Array.isArray(data)) {
-                    const newCards = data.map(item => ({
-                        name: item.name,
-                        abilities: item.abilities.map((ability: any) => ({
-                            ability: {
-                                name: ability.ability.name,
-                                url: ability.ability.url,
-                            },
-                            is_hidden: ability.is_hidden,
-                            slot: ability.slot,
-                        })),
-                        image: item.sprites.front_default, // Agrega esta línea
-                    }));
-                    setCards(newCards);
-                } else {
-                    console.error('No se han devuelto datos desde la API:', data);
-                }
-            });
-    }, []);
+        pokemonIds();
+    }, [id]); //llama a la función pokemonIds() cuando el componente se monta
 
     return (
         <div className={styles.cardContainer}>
