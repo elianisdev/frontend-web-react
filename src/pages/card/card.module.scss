@@ -3,44 +3,45 @@
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.tarjeta{
-  display:flex;
-  flex-direction:$flex-row;
-  justify-content:space-between;
-  width:410px;
-  border: $border-1 solid $secondary-color;;
-  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
-  font-family: sans-serif;
-  margin: 20px; // Añade un margen alrededor de la tarjeta
-}
+.tarjeta {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
 
-.titulo{
-  font-size: 24px;
-  padding: 10px 10px 0 10px;;
-}
-.cuerpo{
-  padding: 10px;
-}
-.pie{
-  background: #6699ff;
-  border-radius:0 0 15px 15px;
-  padding: 10px;
-  text-align:center;
-}
-.pie a{
-  text-decoration: none;
-  color: white;
-}
-.pie a:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: ""
+  img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .titulo, .cuerpo, .pie {
+    padding: 20px;
+  }
+
+  .titulo {
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .cuerpo {
+    color: #666666;
+    flex: 1;
+    font-size: 16px;
+  }
+
+  .pie {
+    border-top: 1px solid #eeeeee;
+    color: #777777;
+    font-size: 14px;
+    text-align: right;
+  }
 }
