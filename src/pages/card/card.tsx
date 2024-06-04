@@ -31,6 +31,7 @@ export const CardComponent: FC<{ Card: any }> = () => {
                     image: response.data.sprites.front_default,
                     name: response.data.name,
                     abilities: response.data.abilities,
+
                 },
             ]);
             setLoading(false); //finaliza la carga
