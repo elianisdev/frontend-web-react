@@ -23,7 +23,7 @@ export const CardComponent: FC<{ Card: any }> = () => {
 
     const pokemonIds = async () => {
         try {
-            const response = await poke.getAll({id: 1});
+            const response = await poke.getAll({id: 23});
             console.log(response.data);
             setLoading(true);
             setCards([
