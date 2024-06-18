@@ -16,7 +16,7 @@ type Card = {
     }[],
 
 }
-export const CardComponent: FC<{ Card: any }> = () => {
+export const CardComponent: FC<{ Card: number }> = () => {
     const [cards, setCards] = useState<Card[]>([]); //almacena lista de tarjetas
     const {id} = useParams(); //obtiene el id de la URL
     const [loading, setLoading] = useState(true); //estado de carga
