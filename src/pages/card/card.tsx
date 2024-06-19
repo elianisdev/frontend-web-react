@@ -4,6 +4,7 @@ import {poke} from '../../api/poke';
 import {useParams} from "react-router-dom";
 
 type Card = {
+    id: number,
     image: string | undefined;
     name: string,
     abilities: {
@@ -24,11 +25,12 @@ export const CardComponent: FC<{ Card: number }> = () => {
 
     const pokemonIds = async () => {
         try {
-            const response = await poke.getAll({id: 26});
+            const response = await poke.getAll({id: 25});
             console.log(response.data);
             setLoading(true);
             setCards([
                 {
+                    id: response.data.id,
                     image: response.data.sprites.front_default,
                     name: response.data.name,
                     abilities: response.data.abilities,
