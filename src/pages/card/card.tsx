@@ -16,6 +16,7 @@ type Card = {
     }[],
 
 }
+
 export const CardComponent: FC<{ Card: number }> = () => {
     const [cards, setCards] = useState<Card[]>([]); //almacena lista de tarjetas
     const {id} = useParams(); //obtiene id de la URL
@@ -23,7 +24,7 @@ export const CardComponent: FC<{ Card: number }> = () => {
 
     const pokemonIds = async () => {
         try {
-            const response = await poke.getAll({id: 23});
+            const response = await poke.getAll({id: 26});
             console.log(response.data);
             setLoading(true);
             setCards([
@@ -31,7 +32,6 @@ export const CardComponent: FC<{ Card: number }> = () => {
                     image: response.data.sprites.front_default,
                     name: response.data.name,
                     abilities: response.data.abilities,
-
                 },
             ]);
             setLoading(false); //finaliza la carga
