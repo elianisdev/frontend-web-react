@@ -27,13 +27,12 @@ export const Characters = () => {
         },
     ]
 
-
     return (
         <div className={styles.title}>
             <h1>Characters</h1>
             <div className={styles.container}>
                 {CharactersCards.map((card : any ) => (
-                    <div>
+                    <div className={styles.card}>
                         <h2>{card.name}</h2>
                         <p>{card.status}</p>
                         <p>{card.species}</p>
