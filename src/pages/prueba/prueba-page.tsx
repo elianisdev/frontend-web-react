@@ -1,5 +1,5 @@
 import React from 'react';
-import {Characters} from "../../components/characters";
+import {Characters} from "../../components/characters/characters";
 
 export const PruebaPage = () => {
     return (
