@@ -1,0 +1,36 @@
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label-day {
+  border: 1px solid #fff;
+  background-color: #2F74B7;
+  flex: 1 0 14%;
+  text-align: center;
+  margin: 0;
+  line-height: 50px;
+  color: #fff;
+}
+
+.box-day {
+  flex: 1 0 14%;
+  border: 1px solid #ccc;
+  text-align: center;
+  height: 120px;
+  margin: 0;
+}
+
+.span-weekend-day {
+  color: #0d2ae7;
+}
+
+.span-week-day {
+  color: #000000;
+}
+
+.span-not-current-month {
+  color: #cccccc;
+}
