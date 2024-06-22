@@ -6,9 +6,11 @@ $card-border-radius: 10px;
 $card-padding: 1rem;
 $card-margin: 1rem;
 
+
 .title{
     font-size: $title-font-size;
     color: $title-color;
+    margin-bottom: 1rem;
 }
 
 .container{
@@ -16,6 +18,7 @@ $card-margin: 1rem;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: $container-margin-top;
+
 
     .card {
         background-color: $card-background-color;
