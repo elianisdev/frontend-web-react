@@ -2,15 +2,7 @@ import './calendar.scss';
 import React from 'react';
 
 export const MyCalender = () => {
-    //const [day, setDay] = useState({
-        //currentMonth: true,
-       // weekDay: 5,
-       // dayMonth: 15
-    //});
 
-  //  const handleClick = () => {
-       // console.log(day);
-    //};
 
     return (
         <div className="flex-container pt-3">
