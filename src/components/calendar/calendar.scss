@@ -6,25 +6,25 @@
 }
 
 .label-day {
-  border: 1px solid #fff;
-  background-color: #2F74B7;
+  border: 1px solid #9a9b9c;
+  background-color: #bfc3c7;
   flex: 1 0 14%;
   text-align: center;
   margin: 0;
   line-height: 50px;
-  color: #fff;
+  color: #080808;
 }
 
 .box-day {
   flex: 1 0 14%;
-  border: 1px solid #ccc;
+  border: 1px solid #f1e8e8;
   text-align: center;
   height: 120px;
   margin: 0;
 }
 
 .span-weekend-day {
-  color: #0d2ae7;
+  color: #0f0f0f;
 }
 
 .span-week-day {
@@ -32,5 +32,5 @@
 }
 
 .span-not-current-month {
-  color: #cccccc;
+  color: #d7d9dd;
 }
