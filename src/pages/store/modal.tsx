@@ -18,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {
             tipoDocumento: 'CC',
             numeroDocumento: '123456789',
-            primerNombre: 'Juan',
+            primerNombre: 'Nicolas',
             primerApellido: 'Perez',
         },
         {
@@ -30,7 +30,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {
             tipoDocumento: 'CC',
             numeroDocumento: '123456789',
-            primerNombre: 'Juan',
+            primerNombre: 'Carlos',
             primerApellido: 'Perez',
         },
         {
@@ -42,7 +42,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {
             tipoDocumento: 'CC',
             numeroDocumento: '123456789',
-            primerNombre: 'Juan',
+            primerNombre: 'Alberto',
             primerApellido: 'Perez',
         },
         {
@@ -54,7 +54,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {
             tipoDocumento: 'CC',
             numeroDocumento: '123456789',
-            primerNombre: 'Juan',
+            primerNombre: 'Pablo',
             primerApellido: 'Perez',
         },
         {
@@ -66,7 +66,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {
             tipoDocumento: 'CC',
             numeroDocumento: '123456789',
-            primerNombre: 'Juan',
+            primerNombre: 'Camilo',
             primerApellido: 'Perez',
         },
 
@@ -109,9 +109,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                                     className="material-icons text-blue-500 hover:text-blue-700 cursor-pointer">edit</span>
                                 <span
                                     className="material-icons text-red-500 hover:text-red-700 cursor-pointer">delete</span>
+
                             </td>
+
                         </tr>
+
                     ))}
+
                     </tbody>
                 </table>
             </div>
