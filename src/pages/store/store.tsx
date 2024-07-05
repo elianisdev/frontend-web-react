@@ -3,6 +3,7 @@ import Modal from './modal';
 
 export const StorePage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <div>
             <h1 className='text-3xl'>Administrador de Personas</h1>
@@ -29,10 +30,11 @@ export const StorePage = () => {
                         </div>
                         <button
                             type="button"
-                            onClick={() => setIsModalOpen(true)}
+
                                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Buscar
                         </button>
                         <button type="button"
+                                onClick={() => setIsModalOpen(true)}
                                 className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Búsqueda
                             Avanzada
                         </button>
