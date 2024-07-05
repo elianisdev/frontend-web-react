@@ -14,7 +14,64 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
-    const [datos, setDatos] = React.useState<Persona[]>([]);
+    const datosMock: Persona[] = [
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '123456789',
+            primerNombre: 'Juan',
+            primerApellido: 'Perez',
+        },
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '987654321',
+            primerNombre: 'Pedro',
+            primerApellido: 'Gomez',
+        },
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '123456789',
+            primerNombre: 'Juan',
+            primerApellido: 'Perez',
+        },
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '987654321',
+            primerNombre: 'Pedro',
+            primerApellido: 'Gomez',
+        },
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '123456789',
+            primerNombre: 'Juan',
+            primerApellido: 'Perez',
+        },
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '987654321',
+            primerNombre: 'Pedro',
+            primerApellido: 'Gomez',
+        },
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '123456789',
+            primerNombre: 'Juan',
+            primerApellido: 'Perez',
+        },
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '987654321',
+            primerNombre: 'Pedro',
+            primerApellido: 'Gomez',
+        },
+        {
+            tipoDocumento: 'CC',
+            numeroDocumento: '123456789',
+            primerNombre: 'Juan',
+            primerApellido: 'Perez',
+        },
+
+    ];
+    const [datos, setDatos] = React.useState<Persona[]>(datosMock);
     if (!isOpen) return null;
 
     return (
@@ -25,27 +82,36 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                     <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo de Documento</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Número de Documento</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Primer Nombre</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Primer Apellido</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo
+                            de Documento
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Número
+                            de Documento
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Primer
+                            Nombre
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Primer
+                            Apellido
+                        </th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acción</th>
                     </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
-                    {datos.map ((persona:Persona, index:number) => (
+                    {datos.map((persona: Persona, index: number) => (
                         <tr key={index}>
                             <td className="px-6 py-4 whitespace-nowrap">{persona.tipoDocumento}</td>
                             <td className="px-6 py-4 whitespace-nowrap">{persona.numeroDocumento}</td>
                             <td className="px-6 py-4 whitespace-nowrap">{persona.primerNombre}</td>
                             <td className="px-6 py-4 whitespace-nowrap">{persona.primerApellido}</td>
-                            <td className="px-6 py-4 whitespace-nowrap">
-                                <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Seleccionar</button>
+                            <td className="px-6 py-4 whitespace-nowrap flex justify-around">
+                                <span
+                                    className="material-icons text-blue-500 hover:text-blue-700 cursor-pointer">edit</span>
+                                <span
+                                    className="material-icons text-red-500 hover:text-red-700 cursor-pointer">delete</span>
                             </td>
                         </tr>
-                    ))
-
-                    }
+                    ))}
                     </tbody>
                 </table>
             </div>
