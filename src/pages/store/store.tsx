@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import Modal from './modal';
+import {FormInformation} from "./form-information";
 
 export const StorePage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
+
         <div>
             <h1 className='text-3xl'>Administrador de Personas</h1>
             <h2 className="w-full text-3xl text-white my-4 float-right rounded-lg bg-gradient-to-r from-green-500 via-blue-800 to-blue-300 border-r-4">informacion</h2>
@@ -43,7 +45,9 @@ export const StorePage = () => {
                     </div>
                 </div>
             </form>
+            <FormInformation/>
         </div>
+
     );
 };
 
