@@ -21,18 +21,16 @@ export const FormInformation = () => {
                     </div>
                     <div className="flex flex-col gap-0">
                         <div>
-                            <label htmlFor="docNumber" className="block mb-2 text-sm font-medium text-gray-900">Segundo
+                            <label htmlFor="secondName" className="block mb-2 text-sm font-medium text-gray-900">Segundo
                                 Nombre*</label>
                             <input type="text" id="docNumber"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                   placeholder="Ingrese el número de documento"/>
+                                   placeholder="Ingrese segundo nombre"/>
                         </div>
 
                     </div>
                     <div className="flex flex-col gap-0">
                         <div>
-                            <label htmlFor="docNumber" className="block mb-2 text-sm font-medium text-gray-900">Primer
-                                Apellido*</label>
                             <label htmlFor="docNumber" className="block mb-2 text-sm font-medium text-gray-900">Primer
                                 Apellido*</label>
                             <input type="text" id="docNumber"
