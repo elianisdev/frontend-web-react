@@ -5,7 +5,7 @@ export const FormInformation = () => {
     return (
         <div>
             <h2 className="w-full text-3xl text-white my-4 float-right rounded-lg bg-gradient-to-r from-green-500 via-blue-800 to-blue-300 border-r-4 py-1.5 px-2">Información</h2>
-            <div className='contain-layout px-4 mx-auto xl:container'>
+            <div className='flexcontain-layout px-4 mx-auto xl:container'>
                 <form className="flex flex-col gap-4 p-4">
                     <div className="flex flex-col gap flex-0">
                         <div>
