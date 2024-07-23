@@ -8,8 +8,8 @@ export const StorePage = () => {
     return (
 
         <div className='contain-content py-3 px-10'>
-            <h1 className='w-full text-3xl text-white my-4 float-right rounded-lg bg-blue-300 from-violet-300 via-blue-800 to-blue-300 border-r-4 py-1.5 px-2'>Administrador de Personas</h1>
-                <h2 className="w-full text-3xl text-white my-4 float-right rounded-lg bg-gradient-to-r from-green-500 via-blue-800 to-blue-300 border-r-4 py-1.5 px-2">Informacion</h2>
+            <h1 className='w-full text-3xl text-white my-4 float-right rounded-lg bg-blue-300 from-violet-300 via-blue-800 to-blue-300 border-r-4 py-2 px-4'>Administrador de Personas</h1>
+                <h2 className="w-full text-3xl text-white my-4 float-right rounded-lg bg-gradient-to-r from-green-500 via-blue-800 to-blue-300 border-r-4 py-2 px-4">Informacion</h2>
             <form className="flex flex-col gap-4 p-4">
                 <div className="flex gap-4">
                     <div>
