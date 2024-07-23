@@ -14,6 +14,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+
     const datosMock: Persona[] = [
         {
             tipoDocumento: 'CC',
@@ -118,6 +119,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
                     </tbody>
                 </table>
+                <div className="flex justify-end space-x-2 mt-5">
+                    <button
+                        className="bg-blue-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                        <span className="material-icons mr-2">delete_outline</span>
+                        Limpiar
+                    </button>
+
+                    <button className="bg-red-400 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                        <span className="material-icons mr-3">cancel</span>
+                        Cancelar
+                    </button>
+                </div>
             </div>
         </div>
     );
