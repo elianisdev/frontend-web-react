@@ -140,7 +140,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                                 </span>
                                 <span
                                     className="material-icons text-red-500 hover:text-red-700 cursor-pointer">delete</span>
-
                             </td>
 
                         </tr>
@@ -171,12 +170,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                             <span className="material-icons mr-2">delete_outline</span>
                             Limpiar
                         </button>
+
                     )}
 
-                    <button className="bg-red-400 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
-                        <span className="material-icons mr-3">cancel</span>
-                        Cancelar
-                    </button>
                 </div>
             </div>
         </div>
