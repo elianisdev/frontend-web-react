@@ -4,6 +4,7 @@ interface PersonaEdit {
     tipoDocumento: string;
     numeroDocumento: string;
     primerNombre: string;
+    primerApellido: string;
 }
 
 interface EditFormProps {
@@ -27,15 +28,19 @@ const EditForm: React.FC<EditFormProps> = ({ persona, onSave }) => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Tipo de Documento</label>
-                <input name="tipoDocumento" value={editData.tipoDocumento} onChange={handleChange} />
+                <input name="tipoDocumento" value={editData.tipoDocumento} onChange={handleChange}/>
             </div>
             <div>
                 <label>Número de Documento</label>
-                <input name="numeroDocumento" value={editData.numeroDocumento} onChange={handleChange} />
+                <input name="numeroDocumento" value={editData.numeroDocumento} onChange={handleChange}/>
             </div>
             <div>
                 <label>Primer Nombre</label>
-                <input name="primerNombre" value={editData.primerNombre} onChange={handleChange} />
+                <input name="primerNombre" value={editData.primerNombre} onChange={handleChange}/>
+            </div>
+            <div>
+                <label>Primer Apellido</label>
+                <input name="primerApellido" value={editData.primerApellido} onChange={handleChange}/>
             </div>
 
             <button type="submit">Guardar Cambios</button>

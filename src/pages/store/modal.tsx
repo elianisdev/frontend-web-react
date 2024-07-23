@@ -1,6 +1,19 @@
 import React from 'react';
+import EditForm  from "../../pages/store/editForm";
 
+class PersonaEdit {
+    tipoDocumento: string;
+    numeroDocumento: string;
+    primerNombre: string;
+    primerApellido: string;
 
+    constructor(tipoDocumento: string, numeroDocumento: string, primerNombre: string, primerApellido: string) {
+        this.tipoDocumento = tipoDocumento;
+        this.numeroDocumento = numeroDocumento;
+        this.primerNombre = primerNombre;
+        this.primerApellido = primerApellido;
+    }
+}
 interface Persona {
     tipoDocumento: string;
     numeroDocumento: string;
@@ -15,7 +28,18 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+    const [mostrarFormulario, setMostrarFormulario] = React.useState(false);
+    const [personaAEditar, setPersonaAEditar] = React.useState<PersonaEdit | null>(null);
 
+    const handleEditarClick = (persona: Persona) => {
+        setPersonaAEditar(new PersonaEdit(
+            persona.tipoDocumento,
+            persona.numeroDocumento,
+            persona.primerNombre,
+            persona.primerApellido
+        ));
+        setMostrarFormulario(true);
+    };
     const datosMock: Persona[] = [
         {
             tipoDocumento: 'CC',
@@ -77,9 +101,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
+
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
             <div className="bg-white p-4 rounded-lg max-w-2xl w-full">
-
                 <button onClick={onClose} className="float-right font-bold">X</button>
                 <h2 className="text-xl font-bold mb-4">Búsqueda Avanzada</h2>
                 <table className="min-w-full divide-y divide-gray-200">
@@ -110,7 +134,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                             <td className="px-6 py-4 whitespace-nowrap flex justify-around">
                                <span
                                    className="material-icons text-blue-500 hover:text-blue-700 cursor-pointer"
-
+                                   onClick={() => handleEditarClick(persona)}
                                >
                                  edit
                                 </span>
@@ -126,11 +150,28 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     </tbody>
                 </table>
                 <div className="flex justify-end space-x-2 mt-5">
-                    <button
-                        className="bg-blue-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
-                        <span className="material-icons mr-2">delete_outline</span>
-                        Limpiar
-                    </button>
+                    {mostrarFormulario && personaAEditar ? (
+                        <EditForm
+                            persona={personaAEditar}
+                            onSave={(personaEditada) => {
+                                setDatos((prevDatos) =>
+                                    prevDatos.map((prevPersona) =>
+                                        prevPersona.numeroDocumento === personaEditada.numeroDocumento
+                                            ? { ...prevPersona, ...personaEditada }
+                                            : prevPersona
+                                    )
+                                );
+                                setMostrarFormulario(false);
+                                setPersonaAEditar(null);
+                            }}
+                        />
+                    ) : (
+                        <button
+                            className="bg-blue-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                            <span className="material-icons mr-2">delete_outline</span>
+                            Limpiar
+                        </button>
+                    )}
 
                     <button className="bg-red-400 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
                         <span className="material-icons mr-3">cancel</span>
@@ -139,6 +180,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 </div>
             </div>
         </div>
+
     );
 };
 
