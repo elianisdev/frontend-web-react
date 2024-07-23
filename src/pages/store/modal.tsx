@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 interface Persona {
     tipoDocumento: string;
     numeroDocumento: string;
@@ -78,6 +79,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
             <div className="bg-white p-4 rounded-lg max-w-2xl w-full">
+
                 <button onClick={onClose} className="float-right font-bold">X</button>
                 <h2 className="text-xl font-bold mb-4">Búsqueda Avanzada</h2>
                 <table className="min-w-full divide-y divide-gray-200">
@@ -106,8 +108,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                             <td className="px-6 py-4 whitespace-nowrap">{persona.primerNombre}</td>
                             <td className="px-6 py-4 whitespace-nowrap">{persona.primerApellido}</td>
                             <td className="px-6 py-4 whitespace-nowrap flex justify-around">
-                                <span
-                                    className="material-icons text-blue-500 hover:text-blue-700 cursor-pointer">edit</span>
+                               <span
+                                   className="material-icons text-blue-500 hover:text-blue-700 cursor-pointer"
+
+                               >
+                                 edit
+                                </span>
                                 <span
                                     className="material-icons text-red-500 hover:text-red-700 cursor-pointer">delete</span>
 
