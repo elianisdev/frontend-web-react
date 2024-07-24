@@ -156,7 +156,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                                 setDatos((prevDatos) =>
                                     prevDatos.map((prevPersona) =>
                                         prevPersona.numeroDocumento === personaEditada.numeroDocumento
-                                            ? { ...prevPersona, ...personaEditada }
+                                            ? {...prevPersona, ...personaEditada}
                                             : prevPersona
                                     )
                                 );
@@ -172,7 +172,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                         </button>
 
                     )}
-
+                    <button
+                        className="bg-red-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                        <span className="material-icons mr-2">clear</span>
+                        Cancelar
+                    </button>
                 </div>
             </div>
         </div>
