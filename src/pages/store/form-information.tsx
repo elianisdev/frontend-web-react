@@ -29,7 +29,8 @@ export const FormInformation = () => {
                                    placeholder="Ingrese primer apellido"/>
                         </div>
                         <div className="px-3 mb-6">
-
+                            <label htmlFor="secondLastName" className="block mb-2 text-sm font-medium text-gray-900">Segundo
+                                Apellido*</label>
                             <input type="text" id="secondLastName"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                    placeholder="Ingrese segundo apellido"/>
@@ -37,7 +38,7 @@ export const FormInformation = () => {
                     </div>
                     <div className="w-full md:w-1/2">
                         <div className="px-3 mb-6">
-                            <label htmlFor="birthDate" className="block mb-2 text-sm font-medium text-gray-900">Fecha de
+                        <label htmlFor="birthDate" className="block mb-2 text-sm font-medium text-gray-900">Fecha de
                                 Nacimiento*</label>
                             <input type="date" id="birthDate"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"/>
