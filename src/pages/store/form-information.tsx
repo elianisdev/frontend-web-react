@@ -77,15 +77,14 @@ export const FormInformation = () => {
                         <span className="material-icons mr-2">delete_outline</span>
                         Limpiar
                     </button>
-
                     <button
                         className="bg-red-400 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
                         <span className="material-icons mr-3">cancel</span>
                         Cancelar
                     </button>
-                    <button  type="submit"
-                        className="bg-green-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
-                        <span  className="material-icons mr-3">save</span>
+                    <button type="submit"
+                            className="bg-green-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                        <span className="material-icons mr-3">save</span>
                         Guardar
                     </button>
                 </div>
