@@ -82,10 +82,12 @@ export const FormInformation = () => {
                         <span className="material-icons mr-3">cancel</span>
                         Cancelar
                     </button>
-                    <button type="submit"
+                    <button
+                        type="submit"
                             className="bg-green-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
                         <span className="material-icons mr-3">save</span>
                         Guardar
+
                     </button>
                 </div>
             </div>
