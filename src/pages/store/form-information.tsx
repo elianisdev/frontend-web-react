@@ -8,19 +8,13 @@ export const FormInformation = () => {
                 <form className="flex gap-4 p-4">
                     <div className="w-full md:w-1/2">
                         <div className="px-3 mb-6">
-                            <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900">Primer
-                                Nombre*</label>
-                            <input type="text" id="firstName"
+                            <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900">
+                                Nombres*</label>
+                            <input type="text" id="Names"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                   placeholder="Ingrese primer nombre"/>
+                                   placeholder="Ingrese sus nombres"/>
                         </div>
-                        <div className="px-3 mb-6">
-                            <label htmlFor="secondName" className="block mb-2 text-sm font-medium text-gray-900">Segundo
-                                Nombre*</label>
-                            <input type="text" id="secondName"
-                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                   placeholder="Ingrese segundo nombre"/>
-                        </div>
+
                         <div className="px-3 mb-6">
                             <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900">Primer
                                 Apellido*</label>
