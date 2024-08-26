@@ -2,7 +2,7 @@ import React from 'react';
 import  {useForm} from 'react-hook-form';
 
 export const FormInformation = () => {
-    const { register, handleSubmit } = useForm()
+    const {register, handleSubmit} = useForm()
 
     return (
         <div className='contain-content py-3 px-10'>
@@ -70,28 +70,29 @@ export const FormInformation = () => {
                                    placeholder="Ingrese estado civil"/>
                         </div>
                     </div>
-                    <div className="flex justify-end space-x-2 mt-5">
-                        <button
-                            className="bg-blue-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
-                            <span className="material-icons mr-2">delete_outline</span>
-                            Limpiar
-                        </button>
-                        <button
-                            className="bg-red-400 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
-                            <span className="material-icons mr-3">cancel</span>
-                            Cancelar
-                        </button>
-                        <button
-                            type="submit"
-                            className="bg-green-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
-                            <span className="material-icons mr-3">save</span>
-                            Guardar
 
-                        </button>
-                    </div>
-                </form>
+                    <button
+                        type="submit"
+                        className="bg-green-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                        <span className="material-icons mr-3">save</span>
+                        Guardar
+                    </button>
 
-            </div>
-        </div>
-    );
+        </form>
+    <div className="flex justify-end space-x-2 mt-5">
+        <button
+            className="bg-blue-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+            <span className="material-icons mr-2">delete_outline</span>
+            Limpiar
+        </button>
+        <button
+            className="bg-red-400 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+            <span className="material-icons mr-3">cancel</span>
+            Cancelar
+        </button>
+    </div>
+    </div>
+</div>
+)
+    ;
 };
