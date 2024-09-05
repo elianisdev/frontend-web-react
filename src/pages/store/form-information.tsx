@@ -71,9 +71,9 @@ export const FormInformation = () => {
                         </div>
                     </div>
 
-                    <button
+                    <button className="flex justify-end space-x-2 mt-5"
                         type="submit"
-                        className="bg-green-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                        >
                         <span className="material-icons mr-3">save</span>
                         Guardar
                     </button>
