@@ -39,7 +39,7 @@ export const FormInformation = () => {
                                    {...register('segundo apellido')}
                                    id="secondLastName"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                   placeholder="Ingrese segundo apellido"/>
+                                   placeholder="Ingrese segundo apellido."/>
                         </div>
                     </div>
                     <div className="w-full md:w-1/2">
@@ -70,21 +70,21 @@ export const FormInformation = () => {
                                    placeholder="Ingrese estado civil"/>
                         </div>
                     </div>
-
-                    <button className="flex justify-end space-x-2 mt-5"
-                        type="submit"
-                        >
-                        <span className="material-icons mr-3">save</span>
-                        Guardar
+                    <div className="flex justify-end space-x-2 mt-5">
+                        <button
+                            type="submit"
+                            className="bg-green-500 text-white px-3 py-1 text-sm rounded-lg mt-4 flex items-center justify-center">
+                            <span className="material-icons mr-2">save</span>
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+                <div className="flex justify-end space-x-2 mt-5">
+                    <button
+                        className="bg-blue-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                        <span className="material-icons mr-2">delete_outline</span>
+                        Limpiar
                     </button>
-
-        </form>
-    <div className="flex justify-end space-x-2 mt-5">
-        <button
-            className="bg-blue-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
-            <span className="material-icons mr-2">delete_outline</span>
-            Limpiar
-        </button>
         <button
             className="bg-red-400 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
             <span className="material-icons mr-3">cancel</span>
