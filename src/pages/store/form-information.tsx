@@ -4,13 +4,17 @@ import  {useForm} from 'react-hook-form';
 export const FormInformation = () => {
     const {register, handleSubmit} = useForm()
 
+    const onSubmit = handleSubmit((data) => {
+    console.log(data)
+    })
+
     return (
         <div className='contain-content py-3 px-10'>
             <h2 className="w-full text-3xl text-white my-4 float-right rounded-lg bg-gradient-to-r from-green-500 via-blue-800 to-blue-300 border-r-4 py-2 px-4">Información</h2>
             <div className='flexcontain-layout px-4 mx-auto xl:container'>
-                <form onSubmit={handleSubmit((data) => {
-                    console.log(data)
-                })} className="flex gap-4 p-4">
+                <form
+                    onSubmit={onSubmit}
+                    className="flex gap-4 p-4">
                     <div className="w-full md:w-1/2">
                         <div className="px-3 mb-6">
                             <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900">
