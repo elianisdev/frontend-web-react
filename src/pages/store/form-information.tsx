@@ -27,25 +27,25 @@ export const FormInformation = () => {
                             <input
                                 type="text"
                                 {...register('nombre', {
-                                    required: true,
-                                    minLength: 3,
-                                    maxLength: 20,
-
+                                    required: {
+                                        value: true,
+                                        message: 'Este campo es requerido'},
+                                    minLength: {
+                                        value: 3,
+                                        message: 'El nombre debe tener al menos 3 caracteres'
+                                    },
+                                    maxLength: {
+                                        value: 20,
+                                        message: 'El nombre debe tener menos de 20 caracteres'
+                                    },
                                 })}
                                 id="Names"
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="Ingrese sus nombres"
                             />
-
-                          {
-                              errors.nombre?.type === 'required' && <p className="text-red-500 text-xs">Este campo es requerido</p>
-                          }
-                            {
-                                errors.nombre?.type === 'minLength' && <p className="text-red-500 text-xs">Mínimo 3 caracteres</p>
-                            }
-                            {
-                                errors.nombre?.type === 'maxLength' && <p className="text-red-500 text-xs">Máximo 20 caracteres</p>
-                            }
+                            {errors.nombre && errors.nombre.message && (
+                                <p className="text-red-500 text-xs">{String(errors.nombre.message)}</p>
+                            )}
 
                         </div>
 
