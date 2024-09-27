@@ -2,7 +2,11 @@ import React from 'react';
 import  {useForm} from 'react-hook-form';
 
 export const FormInformation = () => {
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit,
+        formState: {errors}
+    } = useForm();
+
+    console.log(errors);
 
     const onSubmit = handleSubmit((data) => {
     console.log(data)
@@ -14,36 +18,62 @@ export const FormInformation = () => {
             <div className='flexcontain-layout px-4 mx-auto xl:container'>
                 <form
                     onSubmit={onSubmit}
-                    className="flex gap-4 p-4">
+                    className="flex gap-4 p-4"
+                >
                     <div className="w-full md:w-1/2">
                         <div className="px-3 mb-6">
                             <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900">
                                 Nombres*</label>
                             <input
                                 type="text"
-                                {...register('nombre')}
+                                {...register('nombre', {
+                                    required: {
+                                        value: true,
+                                        message: 'Este campo es requerido'},
+                                    minLength: {
+                                        value: 3,
+                                        message: 'El nombre debe tener al menos 3 caracteres'
+                                    },
+                                    maxLength: {
+                                        value: 20,
+                                        message: 'El nombre debe tener menos de 20 caracteres'
+                                    },
+                                })}
                                 id="Names"
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                placeholder="Ingrese sus nombres"/>
+                                placeholder="Ingrese sus nombres"
+                            />
+                            {errors.nombre && errors.nombre.message && (
+                                <p className="text-red-500 text-xs">{String(errors.nombre.message)}</p>
+                            )}
+
                         </div>
 
                         <div className="px-3 mb-6">
                             <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900">Primer
                                 Apellido*</label>
                             <input type="text"
-                                   {...register('apellido')}
+                                   {...register('apellido', {required: true})}
                                    id="lastName"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                   placeholder="Ingrese primer apellido"/>
+                                   placeholder="Ingrese primer apellido"
+                            />
+
+                            {errors.apellido && <p className="text-red-500 text-xs">Este campo es requerido.</p>}
+
                         </div>
                         <div className="px-3 mb-6">
                             <label htmlFor="secondLastName" className="block mb-2 text-sm font-medium text-gray-900">Segundo
                                 Apellido*</label>
                             <input type="text"
-                                   {...register('segundo apellido')}
+                                   {...register('apellido2', {required: true})}
                                    id="secondLastName"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                   placeholder="Ingrese segundo apellido."/>
+                                   placeholder="Ingrese segundo apellido."
+                            />
+
+                            {errors.apellido2 && <p className="text-red-500 text-xs">Este campo es requerido</p>}
+
                         </div>
                     </div>
                     <div className="w-full md:w-1/2">
@@ -68,10 +98,14 @@ export const FormInformation = () => {
                             <label htmlFor="civilStatus" className="block mb-2 text-sm font-medium text-gray-900">Estado
                                 Civil*</label>
                             <input type="text"
-                                   {...register('estado civil')}
+                                   {...register('estado', {required: true})}
                                    id="civilStatus"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                   placeholder="Ingrese estado civil"/>
+                                   placeholder="Ingrese estado civil"
+                            />
+
+                            {errors.estado && <p className="text-red-500 text-xs">Este campo es requerido</p>}
+
                         </div>
                     </div>
                     <div className="flex justify-end space-x-2 mt-5">
