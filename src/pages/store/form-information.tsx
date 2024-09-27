@@ -59,7 +59,7 @@ export const FormInformation = () => {
                                    placeholder="Ingrese primer apellido"
                             />
 
-                            {errors.apellido && <p className="text-red-500 text-xs">Este campo es requerido</p>}
+                            {errors.apellido && <p className="text-red-500 text-xs">Este campo es requerido.</p>}
 
                         </div>
                         <div className="px-3 mb-6">
