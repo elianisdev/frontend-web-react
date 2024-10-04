@@ -2,16 +2,22 @@ import React from 'react';
 import {useState} from 'react';
 
 
-export const Modal2 = () => {
+interface Modal2Props {
+    isOpen?: boolean,
+    onClose?: () => void
+}
+
+export const Modal2 = ({isOpen, onClose}: Modal2Props) => {
 
     const [openModal, setOpenModal] = useState(false);
 
 
     return (
         <>
-        <button className="bg-blue-400 py-2 px-6 rounded-sm text-cyan-50 font-bold m-5" onClick={()=>setOpenModal(true)  }>
-            Open Modal
-        </button>
+            <button className="bg-blue-400 py-2 px-6 rounded-sm text-cyan-50 font-bold m-5"
+                    onClick={() => setOpenModal(true)}>
+                Open Modal
+            </button>
             {
                 openModal && (
                     <div
@@ -27,6 +33,18 @@ export const Modal2 = () => {
                                 <label htmlFor="" className="mr-3 font-semibold font-[Poppins]">
                                     <input type="text"
                                            className="w-64 px4 border-2 border-gray-300 rounded-lg focus:outline- none focus:border-indigo-500 duration-200"/>Apellido
+                                </label>
+                            </div>
+                            <div>
+                                <label htmlFor="" className="mr-3 font-semibold font-[Poppins]">
+                                    <input type="text"
+                                           className="w-64 px4 border-2 border-gray-300 rounded-lg focus:outline- none focus:border-indigo-500 duration-200"/>Edad
+                                </label>
+                            </div>
+                            <div>
+                                <label htmlFor="" className="mr-3 font-semibold font-[Poppins]">
+                                    <input type="text"
+                                           className="w-64 px4 border-2 border-gray-300 rounded-lg focus:outline- none focus:border-indigo-500 duration-200"/>Correo
                                 </label>
                             </div>
                             <div>
