@@ -6,6 +6,7 @@ import {RouterLayout} from "./pages/common/RouterLayout";
 import {PruebaPage} from "./pages/prueba/prueba-page";
 import {CalendarPage} from "./pages/calendar/pageCalendar";
 import {StorePage} from "./pages/store/store";
+import {Modal2} from "./pages/store/modal2";
 
 
 
@@ -19,6 +20,8 @@ export const AppRouter: FC = () => {
                 <Route path="/prueba" element={<PruebaPage/>}/>
                 <Route path="/calendar" element={<CalendarPage/>}/>
                 <Route path="/store" element={<StorePage/>}/>
+                <Route path="/modal" element={<Modal2/>}/>
+
         </Route>
             <Route path="/login" element={<Login/>}/>
         </Routes>
