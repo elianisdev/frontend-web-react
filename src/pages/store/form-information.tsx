@@ -159,6 +159,5 @@ export const FormInformation = () => {
     </div>
     </div>
 </div>
-)
-    ;
+);
 };
