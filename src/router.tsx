@@ -12,7 +12,7 @@ import {StorePage} from "./pages/store/store";
 
 export const AppRouter: FC = () => {
     return (
-        //esto lleva el layout de home en router layout irian los componentes que lleven el menu y por fuera como el login que no muestra el navbar
+        //esto lleva el layout de home en router layout  los componentes que lleven el menu y por fuera como el login que no muestra el navbar
         <Routes>
             <Route path="/" element={<RouterLayout/>}>
                 <Route path="/home" element={<Home/>}/>
