@@ -3,13 +3,21 @@ import  {useForm} from 'react-hook-form';
 
 export const FormInformation = () => {
     const {register, handleSubmit,
-        formState: {errors}
+        formState: {errors},
+        watch,
+        setValue,
+        reset
     } = useForm();
 
     console.log(errors);
 
     const onSubmit = handleSubmit((data) => {
     console.log(data)
+
+        alert('Datos guardados correctamente')
+        setValue('nombre', '')
+
+        reset()
     })
 
     return (
@@ -134,6 +142,7 @@ export const FormInformation = () => {
                             <span className="material-icons mr-2">save</span>
                             Guardar
                         </button>
+                        <pre>{JSON.stringify(watch(), null, 2)}</pre>
                     </div>
                 </form>
                 <div className="flex justify-end space-x-2 mt-5">
