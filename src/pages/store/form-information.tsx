@@ -29,14 +29,14 @@ export const FormInformation = () => {
                                 {...register('nombre', {
                                     required: {
                                         value: true,
-                                        message: 'Este campo es requerido'},
+                                        message: 'Este campo es requerido, por favor ingrese su nombre'},
                                     minLength: {
                                         value: 3,
-                                        message: 'El nombre debe tener al menos 3 caracteres'
+                                        message: 'El nombre debe tener al menos 3 caracteres, por favor ingrese un nombre válido'
                                     },
                                     maxLength: {
                                         value: 20,
-                                        message: 'El nombre debe tener menos de 20 caracteres'
+                                        message: 'El nombre debe tener menos de 20 caracteres, por favor ingrese un nombre válido'
                                     },
                                 })}
                                 id="Names"
