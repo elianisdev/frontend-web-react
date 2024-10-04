@@ -4,6 +4,7 @@ import { Modal2 } from './modal2';
 
 export const FormInformation = () => {
     const { register, handleSubmit, formState: { errors }, watch, setValue, reset } = useForm();
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const onSubmit = handleSubmit((data) => {
