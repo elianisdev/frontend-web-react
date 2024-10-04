@@ -4,13 +4,20 @@ import  {useForm} from 'react-hook-form';
 export const FormInformation = () => {
     const {register, handleSubmit,
         formState: {errors},
-        watch
+        watch,
+        setValue,
+        reset
     } = useForm();
 
     console.log(errors);
 
     const onSubmit = handleSubmit((data) => {
     console.log(data)
+
+        alert('Datos guardados correctamente')
+        setValue('nombre', '')
+
+        reset()
     })
 
     return (
