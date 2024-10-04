@@ -2,16 +2,22 @@ import React from 'react';
 import {useState} from 'react';
 
 
-export const Modal2 = () => {
+interface Modal2Props {
+    isOpen?: boolean,
+    onClose?: () => void
+}
+
+export const Modal2 = ({isOpen, onClose}: Modal2Props) => {
 
     const [openModal, setOpenModal] = useState(false);
 
 
     return (
         <>
-        <button className="bg-blue-400 py-2 px-6 rounded-sm text-cyan-50 font-bold m-5" onClick={()=>setOpenModal(true)  }>
-            Open Modal
-        </button>
+            <button className="bg-blue-400 py-2 px-6 rounded-sm text-cyan-50 font-bold m-5"
+                    onClick={() => setOpenModal(true)}>
+                Open Modal
+            </button>
             {
                 openModal && (
                     <div
