@@ -84,22 +84,25 @@ export const FormInformation = () => {
                                    {...register('fechaNacimiento', {
                                            required: {
                                                value: true,
-                                               message: "Fecha de nacimiento es requerida"
+                                               message: "Fecha de nacimiento es requerida, por favor ingrese su fecha de nacimiento"
                                            },
                                        validate: (value) => {
                                              const date = new Date(value);
-                                                const currentDate = new Date();
+                                                const currentDate = new Date()
 
-                                                const edad=
-                                                    currentDate.getFullYear() -
+                                                   const edad= currentDate.getFullYear() -
                                                     date.getFullYear();
 
-                                                return edad >= 18 || "Debe ser mayor de edad";
+                                                return edad >= 18 || "Debe ser mayor de edad, por favor ingrese una fecha válida";
                                             }
+
                                         }
-                                   )}
+
+                            )}
+
                                    id="birthDate"
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"/>
+
                         </div>
                         <div className="px-3 mb-6">
                             <label htmlFor="gender"
