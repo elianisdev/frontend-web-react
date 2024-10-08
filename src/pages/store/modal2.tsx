@@ -9,17 +9,11 @@ interface Modal2Props {
 
 export const Modal2 = ({isOpen, onClose}: Modal2Props) => {
 
-    const [openModal, setOpenModal] = useState(false);
-
-
     return (
         <>
-            <button className="bg-blue-400 py-2 px-6 rounded-sm text-cyan-50 font-bold m-5"
-                    onClick={() => setOpenModal(true)}>
-                Open Modal
-            </button>
+
             {
-                openModal && (
+                isOpen && (
                     <div
                         className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center ">
                         <div className="bg-amber-50 p-5 rounded flex flex-col justify-center items-center gap-5">
@@ -49,7 +43,7 @@ export const Modal2 = ({isOpen, onClose}: Modal2Props) => {
                             </div>
                             <div>
                                 <button className="bg-red-400 py-2 px-6 rounded-sm text-cyan-50 font-bold m-5"
-                                        onClick={() => setOpenModal(false)}>
+                                        onClick={() => onClose}>
                                     Close Modal
                                 </button>
                             </div>
