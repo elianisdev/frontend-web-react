@@ -104,7 +104,7 @@ export const FormInformation = () => {
                         <button
                             type="submit"
                             className="bg-green-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
-                            <span className="material-icons mr-3">save</span>
+                            <span className="material-icons mr-2 ">save</span>
                             Guardar
                         </button>
                         {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
