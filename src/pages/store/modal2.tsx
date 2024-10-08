@@ -1,6 +1,4 @@
 import React from 'react';
-import {useState} from 'react';
-
 
 interface Modal2Props {
     isOpen?: boolean,
@@ -43,7 +41,7 @@ export const Modal2 = ({isOpen, onClose}: Modal2Props) => {
                             </div>
                             <div>
                                 <button className="bg-red-400 py-2 px-6 rounded-sm text-cyan-50 font-bold m-5"
-                                        onClick={() => onClose}>
+                                        onClick={onClose}>
                                     Close Modal
                                 </button>
                             </div>

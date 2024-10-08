@@ -100,14 +100,14 @@ export const FormInformation = () => {
                             {errors.estado && <p className="text-red-500 text-xs">Este campo es requerido</p>}
                         </div>
                     </div>
-                    <div className="flex justify-end space-x-2 mt-5">
+                    <div className="py-50">
                         <button
                             type="submit"
-                            className="bg-green-500 text-white px-3 py-1 text-sm rounded-lg mt-4 flex items-center justify-center">
-                            <span className="material-icons mr-2">save</span>
+                            className="bg-green-500 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                            <span className="material-icons mr-3">save</span>
                             Guardar
                         </button>
-                        <pre>{JSON.stringify(watch(), null, 2)}</pre>
+                        {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
                     </div>
                 </form>
                 <div className="flex justify-end space-x-2 mt-5">
@@ -122,7 +122,7 @@ export const FormInformation = () => {
                         Cancelar
                     </button>
                     <button
-                        className="bg-blue-400 py-2 px-6 rounded-sm text-cyan-50 font-bold m-5"
+                        className="bg-blue-600 text-white py-2 px-6 rounded-lg mt-4 flex items-center justify-center"
                         onClick={() => setIsModalOpen(true)}>
                         Open Modal
                     </button>
