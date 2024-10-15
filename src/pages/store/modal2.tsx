@@ -7,6 +7,7 @@ interface Modal2Props {
 
 export const Modal2 = ({isOpen, onClose}: Modal2Props) => {
 
+
     return (
         <>
 
