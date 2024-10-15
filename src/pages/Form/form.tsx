@@ -4,7 +4,7 @@ import {useForm} from "react-hook-form";
 export const MyForm = () => {
     const { register, handleSubmit, formState: { errors }, setValue, reset } = useForm();
 
-    const [isOpen, setIsOpen] = useState(true);
+    const [ isOpen, setIsOpen ] = useState(true);
 
 
     const onSubmit = handleSubmit((data) => {
