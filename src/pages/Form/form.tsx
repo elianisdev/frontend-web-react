@@ -84,15 +84,16 @@ export const MyForm = () => {
                                 {errors.phone && <p className="text-red-500 text-xs">Este campo es requerido</p>}
                             </div>
                         </div>
-                        <div className="flex justify-end space-x-2 mt-5">
-                            <button className="bg-blue-600 text-white py-2 px-6 rounded-lg mt-4 flex items-center justify-center" type="submit">
+                        <div className="flex justify-end space-x-2 mt-60">
+                            <button className="bg-blue-600 text-white py-1 px-3 rounded-lg mt-4 flex items-center justify-center w-24" type="submit">
                                 Enviar
                             </button>
-                            <button className="bg-red-400 text-white px-5 py-2 rounded-lg mt-4 flex items-center justify-center">
+                            <button className="bg-red-400 text-white rounded-lg mt-4 flex items-center justify-center px-6 ">
                                 Cancelar
                             </button>
                         </div>
                     </form>
+
                     {isOpen && (
                         <div className="flex justify-end space-x-2 mt-5">
                             <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
