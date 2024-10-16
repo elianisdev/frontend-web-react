@@ -85,10 +85,11 @@ export const MyForm = () => {
                             </div>
                         </div>
                         <div className="flex justify-end space-x-2 mt-60">
-                            <button className="bg-blue-600 text-white py-1 px-3 rounded-lg mt-4 flex items-center justify-center w-24" type="submit">
+                            <button className="bg-blue-600 text-white py-1 px-3 rounded-lg mt-4 flex items-center justify-center w-24"
+                                    type="submit">
                                 Enviar
                             </button>
-                            <button className="bg-red-400 text-white rounded-lg mt-4 flex items-center justify-center px-6 ">
+                            <button className="bg-red-400 text-white rounded-lg mt-4 flex items-center justify-center py-1 px-3 w-24 ">
                                 Cancelar
                             </button>
                         </div>
