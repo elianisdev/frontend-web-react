@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 
 export const MyForm = () => {
     const { register, handleSubmit, formState: { errors }, setValue, reset } = useForm();
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const openModal = () => {
         setIsOpen(true);
