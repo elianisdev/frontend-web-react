@@ -85,11 +85,13 @@ export const MyForm = () => {
                             </div>
                         </div>
                         <div className="flex justify-end space-x-2 mt-60">
-                            <button className="bg-blue-600 text-white py-1 px-3 rounded-lg mt-4 flex items-center justify-center w-24"
-                                    type="submit">
+                            <button
+                                className="bg-blue-600 text-white py-1 px-2 rounded-lg mt-10 flex items-center justify-center w-16"
+                                type="submit">
                                 Enviar
                             </button>
-                            <button className="bg-red-400 text-white rounded-lg mt-4 flex items-center justify-center py-1 px-3 w-24 ">
+                            <button
+                                className="bg-red-400 text-white rounded-lg mt-10 flex items-center justify-center py-1 px-2 w-16">
                                 Cancelar
                             </button>
                         </div>
@@ -97,7 +99,7 @@ export const MyForm = () => {
 
                     {isOpen && (
                         <div className="flex justify-end space-x-2 mt-5">
-                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                        <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
                                     className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button"
                                     onClick={openModal}>
