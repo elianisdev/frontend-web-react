@@ -84,7 +84,7 @@ export const MyForm = () => {
                                 {errors.phone && <p className="text-red-500 text-xs">Este campo es requerido</p>}
                             </div>
                         </div>
-                        <div className="w-full md:w-1/2 flex-justify-end space-x-4 mt-5">
+                        <div className="w-full md:w-1/2 flex-justify-end space-x-3 mt-auto">
                             <button
                                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
                                 type="submit">
