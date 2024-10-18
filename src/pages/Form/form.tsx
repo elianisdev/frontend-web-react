@@ -118,7 +118,7 @@ export const MyForm = () => {
                     {isCancelModalOpen && (
                         <div className="fixed inset-0 flex items-center justify-center z-50">
                             <div className="fixed inset-0 bg-black opacity-50" onClick={closeCancelModal}></div>
-                            <div className="bg-white rounded-lg shadow dark:bg-gray-700 p-4 md:p-5 relative">
+                            <div className="bg-white rounded-lg shadow dark:bg-gray-500 p-4 md:p-5 relative">
                                 <button type="button"
                                         className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         onClick={closeCancelModal}>
@@ -128,7 +128,7 @@ export const MyForm = () => {
                                     <span className="sr-only">Close modal</span>
                                 </button>
                                 <div className="text-center">
-                                    <h3 className="mb-5 text-lg font-normal text-gray-600 dark:text-gray-400">Are you sure you want to cancel?</h3>
+                                    <h3 className="mb-5 text-lg font-normal text-white dark:text-gray-400">Are you sure you want to cancel?</h3>
                                     <button type="button"
                                             className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
                                             onClick={closeCancelModal}>
@@ -147,7 +147,7 @@ export const MyForm = () => {
                     {isSubmitModalOpen && (
                         <div className="fixed inset-0 flex items-center justify-center z-50">
                             <div className="fixed inset-0 bg-black opacity-50" onClick={closeSubmitModal}></div>
-                            <div className="bg-white rounded-lg shadow dark:bg-gray-700 p-4 md:p-5 relative">
+                            <div className="bg-white rounded-lg shadow dark:bg-gray-600 p-4 md:p-5 relative">
                                 <button type="button"
                                         className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         onClick={closeSubmitModal}>
@@ -159,7 +159,7 @@ export const MyForm = () => {
                                 <div className="text-center">
                                     <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to submit?</h3>
                                     <button type="button"
-                                            className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
+                                            className="text-white bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
                                             onClick={onSubmit}>
                                         Yes, I'm sure
                                     </button>
