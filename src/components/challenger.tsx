@@ -16,3 +16,20 @@ export const MyComponent = () => {
         </div>
     );
 };
+function roundGrades(grades: number[]): number[] {
+    return grades.map(grade => {
+        if (grade < 38) {
+            return grade;
+        }
+        const nextMultipleOfFive = Math.ceil(grade / 5) * 5;
+        if (nextMultipleOfFive - grade < 3) {
+            return nextMultipleOfFive;
+        }
+        return grade;
+    });
+}
+
+// Example usage:
+const grades = [84, 29, 57];
+const roundedGrades = roundGrades(grades);
+console.log(roundedGrades); // Output: [85, 29, 57]
