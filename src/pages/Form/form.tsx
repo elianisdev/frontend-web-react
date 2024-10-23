@@ -56,7 +56,7 @@ export const MyForm = () => {
                                 )}
                             </div>
                             <div className="px-3 mb-6">
-                                <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900">Primer Apellido*</label>
+                                <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900">Primer Apellido,*</label>
                                 <input
                                     type="text"
                                     {...register('apellido', { required: true })}
