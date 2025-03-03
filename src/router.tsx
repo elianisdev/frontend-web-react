@@ -9,9 +9,6 @@ import {StorePage} from "./pages/store/store";
 import {Modal2} from "./pages/store/modal2";
 import {MyForm} from "./pages/Form/form";
 
-
-
-
 export const AppRouter: FC = () => {
     return (
         //esto lleva el layout de home en router layout  los componentes que lleven el menu y por fuera como el login que no muestra el navbar
