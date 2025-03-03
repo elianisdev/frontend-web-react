@@ -8,6 +8,7 @@ import {CalendarPage} from "./pages/calendar/pageCalendar";
 import {StorePage} from "./pages/store/store";
 import {Modal2} from "./pages/store/modal2";
 import {MyForm} from "./pages/Form/form";
+import ImageCard from "./pages/card/image";
 
 export const AppRouter: FC = () => {
     return (
@@ -20,6 +21,7 @@ export const AppRouter: FC = () => {
                 <Route path="/store" element={<StorePage/>}/>
                 <Route path="/modal" element={<Modal2/>}/>
                 <Route path="/form" element={<MyForm/>}/>
+                <Route path="/image" element={<ImageCard/>}/>
 
 
             </Route>
